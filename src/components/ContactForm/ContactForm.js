@@ -15,10 +15,13 @@ const contactSchema = Yup.object().shape({
       'Insert Name and Surname please'
     )
     .required('Required'),
-  number: Yup.number()
-    .test('is-twelve-digits', '12 digits needed', value =>
-      value ? value.toString().length === 12 && !isNaN(value) : false
-    )
+  number: Yup.string()
+  .matches(/^\d{12}$/, 'Please enter 12 digits')
+  // number: Yup.number()
+    // .test(
+    //    value => value ? value.toString().length === 12 && !isNaN(value) : false,
+    //    'Please enter 12 digits'
+    // )
     .required('Required'),
 });
 
@@ -44,7 +47,7 @@ export const ContactForm = ({ onAdd }) => {
 
         <FieldGroup>
           Phone Number
-          <FieldStyled name="number" type="number" placeholder="130123456789" />
+          <FieldStyled name="number" type="tel" placeholder="130123456789" />
           <ErrorMessageStyled name="number" component="span" />
         </FieldGroup>
 
