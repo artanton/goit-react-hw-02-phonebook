@@ -7,5 +7,19 @@ export const theme = {
 
   borderRad: {
     norm: '12px',
+    small: '4px',
   },
+
+  padding: {
+    big: '20px',
+    norm: '8px',
+    small: '4px'
+  },
+
+  gap: {
+    big: '20px',
+    norm:'8px',
+    small: '4px',
+  }
+
 };
