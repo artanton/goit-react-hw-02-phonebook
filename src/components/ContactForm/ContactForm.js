@@ -16,8 +16,8 @@ const contactSchema = Yup.object().shape({
     )
     .required('Required'),
   number: Yup.string()
-  .matches(/^\d{12}$/, 'Please enter 12 digits')
-  // number: Yup.number()
+    .matches(/^\d{12}$/, 'Please enter 12 digits')
+    // number: Yup.number()
     // .test(
     //    value => value ? value.toString().length === 12 && !isNaN(value) : false,
     //    'Please enter 12 digits'
