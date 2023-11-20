@@ -11,7 +11,6 @@ export const FormStyled = styled(Form)`
   padding: ${p => p.theme.padding.big};
   display: flex;
   flex-direction: column;
-  
 `;
 
 export const FieldGroup = styled.label`
@@ -43,6 +42,4 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  
 `;

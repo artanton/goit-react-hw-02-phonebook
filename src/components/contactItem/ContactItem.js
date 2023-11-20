@@ -16,7 +16,7 @@ export const ContactItem = ({ contact, onDelete }) => {
 function formatPhoneNumber(contact) {
   const num = contact.number.toString();
 
-  const firstNo =
+  const formattedNo =
     num.slice(0, 2) +
     '-' +
     num.slice(2, 5) +
@@ -26,7 +26,7 @@ function formatPhoneNumber(contact) {
     num.slice(8, 10) +
     '-' +
     num.slice(10);
-  const formattedNumber = firstNo;
-  
+  const formattedNumber = formattedNo;
+
   return formattedNumber;
 }

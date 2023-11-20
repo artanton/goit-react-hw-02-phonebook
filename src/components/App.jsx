@@ -20,21 +20,21 @@ export class App extends Component {
     });
   };
 
- 
-
   addContact = newContact => {
-    const contactExist = this.state.contacts.some(contact => contact.name === newContact.name);
-  
+    const contactExist = this.state.contacts.some(
+      contact => contact.name === newContact.name
+    );
+
     if (contactExist) {
       Notiflix.Notify.failure(` ${newContact.name} is already in phonebook `);
-      return; 
+      return;
     }
-  
+
     const addingContact = {
       ...newContact,
       id: nanoid(),
     };
-  
+
     this.setState(prevState => ({
       contacts: [...prevState.contacts, addingContact],
     }));

@@ -1,10 +1,14 @@
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Button, ErrorMessageStyled, FieldGroup, FieldStyled, FormStyled } from './ContactFormStyled';
-
+import {
+  Button,
+  ErrorMessageStyled,
+  FieldGroup,
+  FieldStyled,
+  FormStyled,
+} from './ContactFormStyled';
 
 const contactSchema = Yup.object().shape({
-  
   name: Yup.string()
     .matches(
       /^[A-Z][a-z]{1,} [A-Z][a-z]{1,}$/,
